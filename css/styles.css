@@ -1,0 +1,296 @@
+/*----------General Styles----------*/
+* {
+	box-sizing: border-box;
+}
+
+body {	
+	background-color: #fafafa;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+	width: 100%;
+	color: #4a4a4a;
+}
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+img {
+	width: 100%;
+	margin: 0 auto;
+}
+
+header, main, aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+main {
+	background-color: white;
+	padding-bottom: 3em;
+}
+
+h1 {
+	font-size: 1.5em;
+	font-weight: 800;
+}
+
+h2 {
+	font-size: 0.9em;
+	margin: 3.2em;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+h3 {
+	font-weight: 600;
+}
+
+li {
+	list-style-type: none;
+}
+
+
+/*---------------HEADER---------------*/
+
+nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 0 20px;
+	padding: 0;
+}
+
+nav a {
+	text-decoration: none;
+	color: #4a4a4a;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: .9em;
+	margin: 0 0 5px;
+	padding: 10px 0;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.profile-image {
+	padding: 2.5em;
+}
+
+
+/*---------------ASIDE (CONTACT)---------------*/
+
+aside {
+	margin-top: 3em;
+}
+
+aside ul {
+	margin: 0 0 3em;
+	padding: 0;
+}
+
+aside li {
+	margin: .75em 0 1em;
+	padding: 0;
+}
+
+aside h2 {
+	margin-bottom: 1em;
+}
+
+.bold {
+	font-weight: 600;
+	margin-left: .5em;
+}
+
+hr {
+	border: .5px solid #cfcfcf;
+	margin: 0 1em;
+}
+
+/*---------------FOOTER---------------*/
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 1.1em;
+	margin: 0;
+}
+
+footer ul {
+	padding: 0;
+	margin: 2em 0;
+	list-style-type: none;
+	font-size: .9em;
+	font-weight: 800; 
+}
+
+footer a {
+	text-decoration: none;
+	color: #4a4a4a;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: .8em;
+}
+
+.nav-2, .nav-3, .nav-4, .nav-5 {
+	display: none;
+}
+
+/*===========================================*/
+/*---------------MEDIA QUERIES---------------*/
+
+@media (min-width: 768px) {
+	
+	/*---------------HEADER---------------*/
+	nav {
+		flex-direction: row;
+		justify-content: space-around;
+		margin: 0 0 2em 0;
+		padding: 0 10em;
+	}
+	
+	nav a {
+		background-color: transparent;
+	}
+	
+	.header-container {
+		display: flex;
+		margin-bottom: 4em;
+	}
+	
+	.profile-image {
+		order: 2;
+		padding: 0;
+	}
+	
+	.header-container p{
+		width: 70%;
+		font-size: 1.25em;
+		text-align: left;
+		padding-right: 1em;
+		margin-top: 0;
+	}
+	
+	/*---------------MAIN CONTENT---------------*/
+	.wrapper {
+		width: 95%;
+	}
+	
+	.content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	section {
+		width: 48%;
+	}
+	
+	section p {
+		margin-bottom: 3.5em;
+	}
+	
+	/*---------------ASIDE (CONTACT)---------------*/
+	aside.wrapper {
+		width: 70%;
+	}
+	
+	aside h2 {
+		margin: 4em 0 2.5em;
+	}
+	
+	aside p {
+		font-size: 1.3em;
+	}
+	
+	aside li {
+		font-size: 1.2em;
+	}
+	
+	/*---------------FOOTER---------------*/
+	footer {
+		padding-bottom: 2.5em;
+	}
+	
+	.nav-1 {
+		display: none;
+	}
+	
+	.nav-2, .nav-3, .nav-4, .nav-5 {
+		display: initial;
+	}
+	
+	.footer-nav {
+		display: flex;
+		justify-content: flex-end;
+		list-style-type: none;
+	}
+	
+	.footer-nav li {
+		padding-left: 2.5em;
+	}
+}
+
+@media (min-width: 1024px) {
+	/*---------------HEADER---------------*/
+	.lg-screen-nav {
+		display: flex;
+		justify-content: space-between;
+		margin: 1.5em 0;
+	}
+	
+	nav {
+		justify-content: flex-end;
+		padding: 0;
+		margin: 1em 0;
+	}
+	
+	nav a {
+		margin-left: 3em;
+	}
+	
+	.header-container {
+		margin-bottom: 2em;
+	}
+	
+	.header-container p {
+		padding-right: 2em;
+	}
+	
+	header div.wrapper {
+		width: 90%;
+	}
+	
+	/*---------------MAIN CONTENT---------------*/
+	main {
+		margin: 1.5em;
+	}
+	
+	section {
+		width: 30%;
+	}
+	
+	main h2 {
+		margin: 4em 3.2em;
+	}
+	
+	/*---------------ASIDE---------------*/
+	aside.wrapper {
+		width: 60%;
+	}
+	
+	/*---------------FOOTER---------------*/
+	hr {
+		margin: 0 3em;
+	}
+	
+	footer {
+		padding: 0 3em;
+	}
+}
